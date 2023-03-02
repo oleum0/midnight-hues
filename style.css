@@ -1,0 +1,207 @@
+@import url(https://fonts.googleapis.com/css2?family=Abel&family=Exo&family=Tilt+Warp&display=swap);
+
+:root{
+  color-scheme: dark;
+  scroll-behavior: smooth;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --background-1: hsl(214, 14%, 10%);
+  --background-2: hsl(213, 13%, 14%);
+  --background-3: hsl(213, 12%, 18%);
+  --font-color: hsl(211, 29%, 70%);
+  --font-bright: hsl(211, 29%, 85%);
+}
+
+html, body{
+  background-color: var(--background-1);
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-y: scroll;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:visited {
+  color: inherit;
+}
+
+
+.main-content{
+  position: relative;
+  width: 600px;
+  height:470px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 12px;
+  display: inline-grid;
+  grid-template: 200px 200px 70px/ 600px;
+
+}
+
+.up{
+  padding: 39px 20px 30px;
+  border-radius: 20px;
+}
+
+.long{
+  border-radius: 20px;
+  height: auto;
+  width: 104.5%;
+}
+
+.content{
+  display: inline-grid;
+  border-radius: 0px 0px 12px 12px;
+  align-items: center;
+  grid-template: 100px 100px / 200px 200px 200px;
+  animation: anima 0.8s ease-in-out;
+}
+
+@keyframes anima {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0%;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 100%;
+  }
+}
+
+
+#clock{
+  grid-row-start: 1;
+  grid-row-end: 3;
+  height: 96%;
+  width: 90%;
+  display: grid;
+  grid-template-rows: 50% 50%;
+  margin: 0px 10px 0px 19.8px;
+  background-color: var(--background-2);
+  display: inline-grid;
+  text-align: center;
+  border-radius: 18px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  color: var(--font-color);
+  font-size: 60px;
+  font-style: bold;
+  font-family: abel;
+}
+
+#hours{
+  margin-bottom: -20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#minutes{
+  margin-bottom: 31px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bookmark{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Exo', sans-serif;  
+  font-size: 25px;
+  color: var(--font-color);
+  height: 90%;
+  width: 92%;
+  margin: 0px 0px 0px 20px;
+  border-radius: 10px;
+  background-color: var(--background-2);
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+.bookmark:hover {
+  transform: scale(1.05);
+  background-color: var(--background-3);
+  color: var(--font-bright);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.bookmark:not(:hover) {
+  transform: scale(0.95);
+}
+
+.bot{
+  display: inline-grid;
+  grid-template: 100px / 400px 200px;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background-color: var(--background-2);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: width 0.3s ease-in-out;
+  margin-top: 10px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  margin-left: 18px;
+  animation: anima 0.8s ease-in-out;
+}
+
+input[type="text"] {
+  width: 0;
+  height: 100%;
+  font-size: 20px;
+  color: var(--font-bright);
+  padding: 10px 15px 13px 15px;
+  outline: none;
+  border: none;
+  background-color: var(--background-2);
+  transition: width 0.3s ease-in-out;
+}
+
+form:hover {
+  width: 383px;
+}
+
+form:hover input[type="text"] {
+  width: 100%;
+}
+
+.misc{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Exo', sans-serif;  
+  font-size: 25px;
+  color: var(--font-color);
+  width: 177px;
+  height: 60px;
+  margin-top: 10px;
+  margin-left: 23px;
+  border-radius: 12px;
+  background-color: var(--background-2);
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  animation: anima 0.8s ease-in-out;
+}
+
+.misc:hover {
+  transform: scale(1.05);
+  background-color: var(--background-3);
+  color: var(--font-bright);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.misc:not(:hover) {
+  transform: scale(1);
+}
