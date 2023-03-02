@@ -16,3 +16,7 @@ To use this startup page on your browser, follow these steps:
 4. Go to your browser and search for `Homepage and new windows`, Set that option to `Custom URLs`.
 5. In this field paste the `index.html` file location you copied.
 6. Close and reopen your browser. The custom CSS startup page should now be loaded as your homepage or startup page.
+
+## Inspiration
+**[Alpine](https://github.com/refact0r/alpine) by refact0r**</br>
+I really liked their desgin so I remade the whole code from scratch to fit my environment.
